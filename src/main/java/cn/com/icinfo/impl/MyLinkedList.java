@@ -2,6 +2,8 @@ package cn.com.icinfo.impl;
 
 import cn.com.icinfo.inter.List;
 
+
+
 public class MyLinkedList<E> implements List<E> {
     private class Node {
         private E data; // 数据域
