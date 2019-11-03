@@ -1,0 +1,17 @@
+com\icinfo\pojo\SysMenuExample.class
+com\icinfo\pojo\SysUserExample.class
+com\icinfo\pojo\SysMenu.class
+com\icinfo\pojo\SysRoleExample$Criterion.class
+com\icinfo\pojo\SysRoleExample.class
+com\icinfo\pojo\SysMenuExample$Criteria.class
+com\icinfo\pojo\SysRole.class
+com\icinfo\pojo\SysRoleExample$GeneratedCriteria.class
+com\icinfo\pojo\SysUserExample$GeneratedCriteria.class
+com\icinfo\pojo\SysMenuExample$Criterion.class
+com\icinfo\service\UserService.class
+com\icinfo\pojo\SysRoleExample$Criteria.class
+com\icinfo\pojo\SysUserExample$Criteria.class
+com\icinfo\service\SysMenuService.class
+com\icinfo\pojo\SysUser.class
+com\icinfo\pojo\SysUserExample$Criterion.class
+com\icinfo\pojo\SysMenuExample$GeneratedCriteria.class

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apispringbootdruid" />
+        <module name="esserver" />
+        <module name="kafaservespringboot" />
+        <module name="serverspringbootdruid" />
+        <module name="serversysrolespringbootdruid" />
+        <module name="webspringbootdruid" />
+        <module name="zookeeperlockspringboot" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="esserver" options="-parameters" />
+      <module name="kafaservespringboot" options="-parameters" />
+      <module name="serverspringbootdruid" options="-parameters" />
+      <module name="serversysrolespringbootdruid" options="-parameters" />
+      <module name="webspringbootdruid" options="-parameters" />
+    </option>
+  </component>
+</project>

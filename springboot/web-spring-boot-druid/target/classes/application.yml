@@ -1,0 +1,28 @@
+
+
+#logging:
+##  path: E:/project/spring-boot-druid/src/main
+#  file: E:/project/spring-boot-druid/src/mainspringboot.log
+#  level:
+#    root: info
+
+
+
+server:
+  port: 8061
+
+spring:
+  dubbo:
+    application:
+      name: dubbo-consumer
+      id: dubbo-consumer
+    registry:
+      address: zookeeper://192.168.153.129:2181
+    consumer:
+      check: false
+    reference:
+      check: false
+
+
+
+

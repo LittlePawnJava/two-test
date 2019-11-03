@@ -1,0 +1,76 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 192.168.153.129:9300
+      cluster-name: docker-cluster
+  redis:
+    database: 0
+    host: 192.168.153.129
+    port: 6379
+    password: root
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+    timeout: 1000
+  dubbo:
+    application:
+      id: dubbo-Test
+      name: dubbo-Test
+    #    provider:
+    #      filter: dubboLogFilter
+    registry:
+#      address: zookeeper://192.168.1.245:2181
+      address: zookeeper://192.168.153.129:2181
+#      timeout: 10000
+
+    server: true
+
+    protocol:
+      name: dubbo
+      port: 20880
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.153.129:3308/mysql
+#      url: jdbc:mysql://192.168.1.254:3306/test
+      username: root
+      password: 1234
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#      driver-class-name: com.mysql.jdbc.Driver
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+
+
+mybatis:
+  mapper-locations: classpath*:com/icinfo/**/mapper/*.xml
+#  type-aliases-package: com.icinfo.pojo
+
+logging:
+#  path: E:/project/spring-boot-druid/src/main
+  file: D:/BaiduNetdiskDownload/springboot/server-spring-boot-druid/src/mainspringboot.log
+  level:
+    root: info
+
+server:
+  port: 8089
+
+
+
+
+
+
+
+
+
