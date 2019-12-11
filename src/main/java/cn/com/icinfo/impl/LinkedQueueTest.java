@@ -1,12 +1,11 @@
 package cn.com.icinfo.impl;
 
 import cn.com.icinfo.inter.Queue;
-import cn.com.icinfo.inter.Stack;
 
-public class LinkedQueue<E> implements Queue<E> {
-    private class Node<E>{
+public class LinkedQueueTest<E> implements Queue<E> {
+    private class Node{
         private E data;
-        private Node<E> next;
+        private Node next;
 
         public Node(E data, Node next) {
             this.data = data;
@@ -18,14 +17,14 @@ public class LinkedQueue<E> implements Queue<E> {
         }
     }
 
-    private Node<E> head;
-    private Node<E> tail;
     private int size;
+    private Node head;
+    private Node tail;
 
-    public LinkedQueue() {
+    public LinkedQueueTest() {
+        this.size = 0;
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     @Override
@@ -40,16 +39,13 @@ public class LinkedQueue<E> implements Queue<E> {
 
     @Override
     public void enqueue(E e) {
-        Node<E> prev = tail;
-        tail = new Node<E>(e, null);
-
+        Node pre = tail;
+        tail = new Node(e);
         if (size == 0) {
             head = tail;
-
-        }else {
-            prev.next = tail;
+        } else {
+            pre.next = tail;
         }
-
         size++;
     }
 
@@ -76,9 +72,8 @@ public class LinkedQueue<E> implements Queue<E> {
         }
         return head.data;
     }
-
     public static void main(String[] args) {
-        Queue<Integer> arrayStack = new LinkedQueueTest<>();
+        Queue<Integer> arrayStack = new LinkedQueueTest<Integer>();
         for (int i = 0; i < 100; i++) {
             arrayStack.enqueue(i);
         }
@@ -91,5 +86,7 @@ public class LinkedQueue<E> implements Queue<E> {
         for (int i = 0; i < leng; i++) {
             System.out.println("弹出元素 ： " + arrayStack.dequeue());
         }
+        System.out.println(arrayStack.peek());
     }
+
 }
